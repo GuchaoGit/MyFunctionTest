@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorTrans">#00000000</color>
+    <color name="colorTrans20">#33000000</color>
+    <color name="colorTrans40">#66000000</color>
+    <color name="colorTrans60">#99000000</color>
+    <color name="colorTrans80">#cc000000</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDivier">#DEE2EB</color>
+    <color name="colorPress">#11000000</color>
+    <color name="colorOrange">#FDAF27</color>
+
+</resources>

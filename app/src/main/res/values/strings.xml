@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyLibrary</string>
+    <string name="common_loading">加载中</string>
+    <string name="common_tip">提示</string>
+
+    <string name="common_cancel">取消</string>
+    <string name="common_sure">确定</string>
+
+
+    <string name="label_contacts">通讯录搜索模块</string>
+    <string name="label_expandable_listview">可分组的Listview</string>
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTrans"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/tip_dialog_w"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dra_whitecon_radius"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/blank_l"
+        android:paddingRight="@dimen/blank_l">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tip_dialog_top_h"
+            android:gravity="center"
+            android:text="@string/common_tip"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_l" />
+
+        <View style="@style/DivierH" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/blank_l"
+            android:paddingTop="@dimen/blank_l">
+
+            <TextView
+                android:id="@+id/txtv_tip_dialog_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:lineSpacingMultiplier="1.2"
+                android:minHeight="@dimen/tip_dialog_bottom_min_h"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/blank_l"
+            android:weightSum="6">
+
+            <Button
+                android:id="@+id/btn_tip_dialog_left"
+                style="@style/BtnYellowRadius"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:text="@string/common_cancel" />
+
+            <Button
+                android:id="@+id/btn_tip_dialog_right"
+                style="@style/BtnGrayFrameRadius"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/blank_m"
+                android:layout_weight="3"
+                android:text="@string/common_sure" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

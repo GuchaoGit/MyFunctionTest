@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--进度条对话框-->
+    <dimen name="loading_dialog_size">100dp</dimen>
+    <dimen name="loading_dialog_icon_size">50dp</dimen>
+
+    <!--字体-->
+    <dimen name="text_xl">18sp</dimen>
+    <dimen name="text_l">16sp</dimen>
+    <dimen name="text_m">14sp</dimen>
+    <dimen name="text_s">12sp</dimen>
+    <dimen name="text_xs">10sp</dimen>
+
+    <!--间距-->
+    <dimen name="blank_xl">20dp</dimen>
+    <dimen name="blank_l">15dp</dimen>
+    <dimen name="blank_m">10dp</dimen>
+    <dimen name="blank_s">5dp</dimen>
+
+    <dimen name="radius">4dp</dimen>        <!--圆角 -->
+    <dimen name="divier_h">0.8dp</dimen>    <!--分割线宽度-->
+
+    <!--对话框-->
+    <dimen name="tip_dialog_w">310dp</dimen>
+    <dimen name="tip_dialog_top_h">40dp</dimen>
+    <dimen name="tip_dialog_bottom_min_h">70dp</dimen>
+
+    <!--按钮的宽度-->
+    <dimen name="btn_w">310dp</dimen>
+    <dimen name="btn_h">48dp</dimen>
+</resources>

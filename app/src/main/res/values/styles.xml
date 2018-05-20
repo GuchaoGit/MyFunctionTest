@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <!--透明Dialog-->
+    <style name="TransDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/colorTrans</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <!--加载框样式-->
+    <style name="LoadingDialog" parent="@style/TransDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--去除回弹效果-->
+    <style name="NoFadingEdge">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:fadingEdgeLength">0dp</item>
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <!--分割线横向-->
+    <style name="DivierH">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divier_h</item>
+        <item name="android:background">@color/colorDivier</item>
+    </style>
+
+    <!--分割线竖向-->
+    <style name="DivierV">
+        <item name="android:layout_width">@dimen/divier_h</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorDivier</item>
+    </style>
+
+    <!--按钮-->
+    <style name="Btn" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">@dimen/btn_w</item>
+        <item name="android:layout_height">@dimen/btn_h</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_l</item>
+    </style>
+    <style name="BtnYellowRadius" parent="Btn">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:background">@drawable/drasel_btn_yellowcon_radius</item>
+    </style>
+
+    <style name="BtnGrayFrameRadius" parent="Btn">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/drasel_btn_divierfra_radius</item>
+    </style>
+
+</resources>
