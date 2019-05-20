@@ -18,9 +18,8 @@ import com.guc.mylibrary.R;
 
 
 /**
- * Author: Mr.Gu
- * Date: 2019/5/15
- * Description:
+ * Created by guc on 2019/5/16.
+ * 描述：
  */
 public class FoldView extends FrameLayout implements View.OnClickListener {
     TextView mTvContent;
@@ -29,10 +28,10 @@ public class FoldView extends FrameLayout implements View.OnClickListener {
     private int mTextColor;
     private float mTextSize;
     private boolean isTextVisiable = true;
-    private Drawable mResArrowUp ;
+    private Drawable mResArrowUp;
     private Drawable mResArrowDown;
 
-    private boolean foldType = false;//默认展开状态
+    private boolean foldType = false;// true:展开  false:关闭
 
     public FoldView(@NonNull Context context) {
         this(context, null);
@@ -47,14 +46,14 @@ public class FoldView extends FrameLayout implements View.OnClickListener {
         final TypedArray attributes = context.getTheme().obtainStyledAttributes(attrs, R.styleable.FoldView, defStyleAttr, 0);
 
         mTextColor = attributes.getColor(R.styleable.FoldView_desc_text_color, Color.BLUE);
-        mTextSize = attributes.getDimensionPixelSize(R.styleable.FoldView_desc_text_size,12);
-        isTextVisiable = attributes.getBoolean(R.styleable.FoldView_is_text_visiable,true);
+        mTextSize = attributes.getDimensionPixelSize(R.styleable.FoldView_desc_text_size, 12);
+        isTextVisiable = attributes.getBoolean(R.styleable.FoldView_is_text_visible, true);
         mResArrowUp = attributes.getDrawable(R.styleable.FoldView_arrow_up_drawable);
         mResArrowDown = attributes.getDrawable(R.styleable.FoldView_arrow_down_drawable);
         if (mResArrowUp == null)
-        mResArrowUp =  ContextCompat.getDrawable(context, R.drawable.arrowup);
+            mResArrowUp = ContextCompat.getDrawable(context, R.drawable.arrowup);
         if (mResArrowDown == null)
-        mResArrowDown =  ContextCompat.getDrawable(context, R.drawable.arrowdown);
+            mResArrowDown = ContextCompat.getDrawable(context, R.drawable.arrowdown);
         attributes.recycle();
         initView(context);
     }
@@ -63,7 +62,7 @@ public class FoldView extends FrameLayout implements View.OnClickListener {
         View view = LayoutInflater.from(context).inflate(R.layout.view_fold, null);
         mTvContent = view.findViewById(R.id.tv_content);
         mIvArrow = view.findViewById(R.id.iv_arrow);
-        mTvContent.setVisibility(isTextVisiable?VISIBLE:INVISIBLE);
+        mTvContent.setVisibility(isTextVisiable ? VISIBLE : INVISIBLE);
         mTvContent.setTextColor(mTextColor);
         mTvContent.setTextSize(px2sp(mTextSize));
         mTvContent.setOnClickListener(this);
@@ -79,7 +78,7 @@ public class FoldView extends FrameLayout implements View.OnClickListener {
      */
     public void setControlView(View view) {
         this.mView = view;
-        changeStatus();
+        changeView();
     }
 
     /**
@@ -97,43 +96,46 @@ public class FoldView extends FrameLayout implements View.OnClickListener {
             mTvContent.setText("点击收起");
             mIvArrow.setImageDrawable(mResArrowUp);
         } else {
-            mTvContent.setText("查看更多");
+            mTvContent.setText("点击展开");
             mIvArrow.setImageDrawable(mResArrowDown);
         }
+        changeView();
     }
 
     @Override
     public void onClick(View view) {
-                changeStatus();
+        changeStatus();
     }
 
     private void changeStatus() {
         if (foldType) {
-            mTvContent.setText("查看更多");
+            mTvContent.setText("点击展开");
             mIvArrow.setImageDrawable(mResArrowDown);
         } else {
             mTvContent.setText("点击收起");
             mIvArrow.setImageDrawable(mResArrowUp);
         }
-        changeView();
         foldType = !foldType;
+        changeView();
     }
 
     private void changeView() {
         if (mView != null) {
             if (foldType) {//打开view
-                mView.setVisibility(View.GONE);
-            } else {//关闭view
                 mView.setVisibility(View.VISIBLE);
+            } else {//关闭view
+                mView.setVisibility(View.GONE);
             }
         }
     }
+
     private int sp2px(float sp) {
         final float scale = getResources().getDisplayMetrics().scaledDensity;
-        return (int)(sp * scale + 0.5);
+        return (int) (sp * scale + 0.5);
     }
+
     private int px2sp(float px) {
         final float scale = getResources().getDisplayMetrics().scaledDensity;
-        return (int)(px/scale + 0.5);
+        return (int) (px / scale + 0.5);
     }
 }

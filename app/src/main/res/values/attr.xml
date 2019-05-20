@@ -11,7 +11,7 @@
     <declare-styleable name="FoldView">
         <attr name="desc_text_color" format="color"/>
         <attr name="desc_text_size" format="dimension"/>
-        <attr name="is_text_visiable" format="boolean"/>
+        <attr name="is_text_visible" format="boolean"/>
         <attr name="arrow_down_drawable" format="dimension"/>
         <attr name="arrow_up_drawable" format="dimension"/>
     </declare-styleable>
