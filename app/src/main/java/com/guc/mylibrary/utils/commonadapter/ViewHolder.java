@@ -26,7 +26,7 @@ public class ViewHolder {
     private View mConvertView;
     private Context mContext;
 
-    private ViewHolder(Context context, View itemView, ViewGroup parent, int position) {
+    public ViewHolder(Context context, View itemView, ViewGroup parent, int position) {
         mContext = context;
         mConvertView = itemView;
         mPosition = position;

@@ -16,6 +16,7 @@
     <LinearLayout
         android:id="@+id/ll_content"
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
@@ -31,6 +32,12 @@
             android:layout_height="wrap_content"
             android:text="仿微信联系人"
          />
+
+        <TextView
+            android:id="@+id/tv_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的IP是：" />
     </LinearLayout>
 
     <com.guc.mylibrary.widgets.LooperTextView
