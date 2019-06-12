@@ -15,5 +15,18 @@
         <attr name="arrow_down_drawable" format="dimension"/>
         <attr name="arrow_up_drawable" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="ViewNoData">
+        <attr name="hintIcon" format="reference" />
+        <attr name="hint1" format="reference" />
+        <attr name="hint2" format="reference" />
+        <attr name="mulLineHint" format="boolean" />
+        <attr name="topIconMargin" format="dimension" />
+    </declare-styleable>
 
+    <declare-styleable name="ViewRichText">
+        <attr name="title" format="string" />
+        <attr name="content" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="contentTextColor" format="color" />
+    </declare-styleable>
 </resources>
