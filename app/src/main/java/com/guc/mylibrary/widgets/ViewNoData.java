@@ -66,6 +66,21 @@ public class ViewNoData extends FrameLayout {
         mTvHint2.setVisibility(isMulLineHint ? VISIBLE : GONE);
     }
 
+    public void setHintIcon(@NonNull int resId) {
+        mHintIconId = resId;
+        mViewPicture.setBackgroundResource(mHintIconId);
+    }
+
+    public void setHint1(String hint1) {
+        mHint1 = hint1;
+        mTvHint1.setText(mHint1);
+    }
+
+    public void setHint1(@NonNull int resId) {
+        mHint1 = mCxt.getString(resId);
+        mTvHint1.setText(mHint1);
+    }
+
     private int dp2px(float dpValue) {
         final float scale = getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
