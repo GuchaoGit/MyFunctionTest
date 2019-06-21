@@ -9,5 +9,13 @@
 
     <string name="label_contacts">通讯录搜索模块</string>
     <string name="label_expandable_listview">可分组的Listview</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="pickerview_submit">选择</string>
+    <string name="pickerview_cancel">取消</string>
 
 </resources>

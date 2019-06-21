@@ -16,6 +16,7 @@ import com.guc.mylibrary.utils.commonadapter.CommonRecycleAdapter;
 import com.guc.mylibrary.utils.commonadapter.CommonViewHolder;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -24,7 +25,8 @@ import java.util.List;
  */
 public class YearSelectDialogUtil {
 
-    public static void showSelectYearDialog(final Context context, final int selectYear, int currentYear, int maxRange, final OnYearSelected onYearSelected) {
+    public static void showSelectYearDialog(final Context context, final int selectYear, int maxRange, final OnYearSelected onYearSelected) {
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         View rootView = View.inflate(context, R.layout.dialog_select_year, null);
         final AlertDialog dialog = new AlertDialog.Builder(context, R.style.ActionSheetDialogStyle).setView(rootView).create();
         dialog.show();

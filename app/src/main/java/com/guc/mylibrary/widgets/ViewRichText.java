@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.AppCompatTextView;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 import com.guc.mylibrary.R;
 
@@ -17,7 +17,7 @@ import com.guc.mylibrary.R;
  * Created by guc on 2019/6/11.
  * 描述：说明 和 内容同行 但样式不一样
  */
-public class ViewRichText extends TextView {
+public class ViewRichText extends AppCompatTextView {
     private String mTitle;
     private String mContent;
     private int mTitleTextColor;

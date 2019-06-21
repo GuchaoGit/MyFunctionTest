@@ -28,4 +28,6 @@
     <!--按钮的宽度-->
     <dimen name="btn_w">310dp</dimen>
     <dimen name="btn_h">48dp</dimen>
+
+    <dimen name="pickerview_textsize">14sp</dimen>
 </resources>

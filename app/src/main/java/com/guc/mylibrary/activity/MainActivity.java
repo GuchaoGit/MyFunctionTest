@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.tv_expandable, R.id.tv_contacts, R.id.fd_view})
+    @OnClick({R.id.tv_expandable, R.id.tv_contacts, R.id.tv_selector, R.id.fd_view})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_expandable:
@@ -97,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.tv_contacts:
                 startActivity(new Intent(this, ActivityContacts.class));
+                break;
+            case R.id.tv_selector:
+                ActivityPickerViewTest.jump(this);
                 break;
         }
     }

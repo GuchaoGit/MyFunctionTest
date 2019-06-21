@@ -29,4 +29,13 @@
         <attr name="titleTextColor" format="color" />
         <attr name="contentTextColor" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="WheelView">
+        <attr name="pickerview_gravity" format="integer" />
+        <attr name="pickerview_textColorOut" format="reference" />
+        <attr name="pickerview_textColorCenter" format="reference" />
+        <attr name="pickerview_dividerColor" format="reference" />
+        <attr name="pickerview_textSize" format="dimension" />
+        <attr name="pickerview_lineSpacingMultiplier" format="float" />
+    </declare-styleable>
 </resources>

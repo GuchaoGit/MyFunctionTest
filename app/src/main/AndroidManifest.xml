@@ -27,6 +27,9 @@
             android:label="@string/label_contacts"/>
         <activity android:name=".activity.ActivityExpandableListView"
             android:label="@string/label_expandable_listview"/>
+        <activity
+            android:name=".activity.ActivityPickerViewTest"
+            android:label="@string/pickerview_submit" />
     </application>
 
 </manifest>
