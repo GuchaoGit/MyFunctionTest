@@ -87,12 +87,9 @@ public class ActivityPickerViewTest extends Activity {
                 });
                 break;
             case R.id.btn_sel_time:
-                mTimePicker = new TimePickerView.Builder(this, new TimePickerView.OnTimeSelectListener() {
-                    @Override
-                    public void onTimeSelect(Date date, View v) {
-                        mTvSelTime.setContent(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(date));
-                    }
-                }).setType(TimePickerView.Type.ALL).setContentSize(14).build();
+                mTimePicker = new TimePickerView.Builder(this, (Date date, View v) ->
+                        mTvSelTime.setContent(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(date))
+                ).setType(TimePickerView.Type.ALL).setContentSize(14).build();
                 mTimePicker.show();
                 break;
         }
