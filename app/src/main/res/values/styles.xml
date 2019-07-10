@@ -82,4 +82,11 @@
         <item name="android:windowEnterAnimation">@anim/dialog_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_out</item>
     </style>
+    <!--DialogFragment样式-->
+    <style name="AppTheme.AppCompat.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:maxWidth">1080px</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>

@@ -47,6 +47,19 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:title="已选择的时间：" />
+
+        <Button
+            android:id="@+id/btn_sel_option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择条件2" />
+
+        <com.guc.mylibrary.widgets.ViewRichText
+            android:id="@+id/tv_sel_option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:title="已选择的条件：" />
     </LinearLayout>
 
 </ScrollView>

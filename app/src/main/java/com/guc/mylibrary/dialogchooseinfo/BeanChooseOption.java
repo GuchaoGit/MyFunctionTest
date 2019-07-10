@@ -1,0 +1,61 @@
+package com.guc.mylibrary.dialogchooseinfo;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class BeanChooseOption implements Parcelable {
+    public static final Creator<BeanChooseOption> CREATOR = new Creator<BeanChooseOption>() {
+        @Override
+        public BeanChooseOption createFromParcel(Parcel in) {
+            return new BeanChooseOption(in);
+        }
+
+        @Override
+        public BeanChooseOption[] newArray(int size) {
+            return new BeanChooseOption[size];
+        }
+    };
+    public String key = "";
+    public String value = "";
+    public boolean selected;
+
+    public BeanChooseOption() {
+
+    }
+
+    /**
+     *
+     * @param key   显示名字
+     * @param value 代码
+     */
+    public BeanChooseOption(String key,String value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    protected BeanChooseOption(Parcel in) {
+        key = in.readString();
+        value = in.readString();
+        selected = in.readByte() != 0;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(key);
+        dest.writeString(value);
+        dest.writeByte((byte) (selected ? 1 : 0));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof BeanChooseOption) {
+            return this.key.equals(((BeanChooseOption) o).key);
+        }
+        return super.equals(o);
+    }
+}
