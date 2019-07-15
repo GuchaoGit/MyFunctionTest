@@ -18,4 +18,7 @@
     <string name="pickerview_submit">选择</string>
     <string name="pickerview_cancel">取消</string>
 
+    <string name="str_nul">暂无</string>
+    <string name="str_add">新增</string>
+
 </resources>

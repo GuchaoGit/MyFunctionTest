@@ -9,6 +9,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <com.guc.mylibrary.widgets.ToolBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:leftType="finish"
+            app:title="选择器测试" />
+
         <Button
             android:id="@+id/btn_sel_option"
             android:layout_width="match_parent"

@@ -89,4 +89,41 @@
         <item name="android:maxWidth">1080px</item>
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
+
+    <!--宽高设置：wrap -wrap -->
+    <style name="Dimension_ww">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--宽高设置：match -wrap -->
+    <style name="Dimension_mw">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="Dimension_ww">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!--默认字体 颜色：黑色 字体：14sp-->
+    <style name="StyleCommonText" parent="Dimension_ww">
+        <item name="android:textColor">@color/colorBlackLight</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="StyleCommonText.bold" parent="StyleCommonText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="StyleCommonText.White" parent="StyleCommonText">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="StyleCommonText.GrayDark" parent="StyleCommonText">
+        <item name="android:textColor">@color/colorGrayDark</item>
+    </style>
+
+    <style name="StyleCommonText.Gray" parent="StyleCommonText">
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
 </resources>

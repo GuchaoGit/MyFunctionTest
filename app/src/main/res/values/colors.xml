@@ -12,6 +12,9 @@
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorBlackLight">#333333</color>
+    <color name="colorGrayDark">#666666</color>
+    <color name="colorGray">#999999</color>
     <color name="colorDivier">#DEE2EB</color>
     <color name="colorPress">#11000000</color>
     <color name="colorOrange">#FDAF27</color>
