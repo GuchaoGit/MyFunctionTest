@@ -18,8 +18,8 @@ import com.guc.mylibrary.R;
  * 描述：说明 和 内容同行 但样式不一样
  */
 public class ViewRichText extends AppCompatTextView {
-    private String mTitle;
-    private String mContent;
+    private CharSequence mTitle;
+    private CharSequence mContent;
     private int mTitleTextColor;
     private int mContentTextColor;
 
@@ -34,13 +34,13 @@ public class ViewRichText extends AppCompatTextView {
     public ViewRichText(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ViewRichText);
-        mTitle = a.getString(R.styleable.ViewRichText_title);
-        mContent = a.getString(R.styleable.ViewRichText_content);
+        mTitle = a.getText(R.styleable.ViewRichText_title);
+        mContent = a.getText(R.styleable.ViewRichText_content);
         if (mContent == null) mContent = "暂无";
         mTitleTextColor = a.getColor(R.styleable.ViewRichText_titleTextColor, Color.parseColor("#666666"));
         mContentTextColor = a.getColor(R.styleable.ViewRichText_contentTextColor, Color.parseColor("#333333"));
         a.recycle();
-        setContent(mContent);
+        setContent(mContent.toString());
     }
 
     public void setContent(String content) {

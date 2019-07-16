@@ -17,8 +17,8 @@
     </declare-styleable>
     <declare-styleable name="ViewNoData">
         <attr name="hintIcon" format="reference" />
-        <attr name="hint1" format="reference" />
-        <attr name="hint2" format="reference" />
+        <attr name="hint1" format="reference|string" />
+        <attr name="hint2" format="reference|string" />
         <attr name="mulLineHint" format="boolean" />
         <attr name="topIconMargin" format="dimension" />
     </declare-styleable>

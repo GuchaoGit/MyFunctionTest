@@ -27,8 +27,8 @@ public class ViewNoData extends FrameLayout {
     @BindView(R.id.view_picture)
     View mViewPicture;
     private Context mCxt;
-    private String mHint1;
-    private String mHint2;
+    private CharSequence mHint1;
+    private CharSequence mHint2;
     private int mHintIconId;
     private boolean isMulLineHint;
     private int mTopMargin;
@@ -48,8 +48,8 @@ public class ViewNoData extends FrameLayout {
         ButterKnife.bind(this);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ViewNoData);
         mHintIconId = a.getResourceId(R.styleable.ViewNoData_hintIcon, R.drawable.icon_search_empty);
-        mHint1 = a.getString(R.styleable.ViewNoData_hint1);
-        mHint2 = a.getString(R.styleable.ViewNoData_hint2);
+        mHint1 = a.getText(R.styleable.ViewNoData_hint1);
+        mHint2 = a.getText(R.styleable.ViewNoData_hint2);
         isMulLineHint = a.getBoolean(R.styleable.ViewNoData_mulLineHint, true);
         mTopMargin = a.getDimensionPixelSize(R.styleable.ViewNoData_topIconMargin, dp2px(160));
         a.recycle();
