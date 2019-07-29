@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     android:orientation="vertical">
 
     <com.guc.mylibrary.widgets.ToolBar
@@ -10,4 +11,10 @@
         android:layout_height="wrap_content"
         app:leftType="finish"
         app:title="窗口化Activity" />
+
+    <Button
+        android:id="@+id/btn_show_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示提示dialog" />
 </LinearLayout>

@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityPickerViewTest.jump(this);
                 break;
             case R.id.btn_dialog:
-                ActivityDialog.jump(this, false);
+                ActivityDialog.jump(this, true);
                 break;
         }
     }
