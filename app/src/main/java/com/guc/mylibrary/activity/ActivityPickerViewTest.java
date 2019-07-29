@@ -43,6 +43,7 @@ public class ActivityPickerViewTest extends Activity {
     private OptionsPickerView<String> mOptionPicker;
     private TimePickerView mTimePicker;
     private List<String> mOptions;
+    private List<List<String>> mOptions2Opt;
     private List<BeanChooseOption> mOptions2;
     private List<BeanChooseOption> mOpt2Sel;
 
@@ -73,6 +74,16 @@ public class ActivityPickerViewTest extends Activity {
                 add("Option 9");
             }
         };
+        mOptions2Opt = new ArrayList<>();
+        mOptions2Opt.add(mOptions);
+        mOptions2Opt.add(mOptions);
+        mOptions2Opt.add(mOptions);
+        mOptions2Opt.add(mOptions);
+        mOptions2Opt.add(mOptions);
+        mOptions2Opt.add(mOptions);
+        mOptions2Opt.add(mOptions);
+        mOptions2Opt.add(mOptions);
+        mOptions2Opt.add(new ArrayList<>());
         mOptions2 = new ArrayList<BeanChooseOption>(){
             {
                 add(new BeanChooseOption("选择1","1"));
@@ -92,7 +103,7 @@ public class ActivityPickerViewTest extends Activity {
                 mOptionPicker = new OptionsPickerView.Builder<String>(this, (int options1, int options2, int options3, View v) -> {
                     mTvSelOption.setContent(mOptions.get(options1));
                 }).build();
-                mOptionPicker.setPicker(mOptions);
+                mOptionPicker.setPicker(mOptions, mOptions2Opt);
                 mOptionPicker.show();
                 break;
             case R.id.btn_sel_year:
