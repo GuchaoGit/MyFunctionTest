@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.guc.mylibrary">
-
     <!-- 拨打电话权限 -->
-    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
-    <!--网络权限-->
+    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,22 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activity.ActivityContacts"
-            android:label="@string/label_contacts"/>
-        <activity android:name=".activity.ActivityExpandableListView"
-            android:label="@string/label_expandable_listview"/>
+        <activity
+            android:name=".activity.ActivityContacts"
+            android:label="@string/label_contacts" />
+        <activity
+            android:name=".activity.ActivityExpandableListView"
+            android:label="@string/label_expandable_listview" />
         <activity
             android:name=".activity.ActivityPickerViewTest"
             android:label="@string/pickerview_submit" />
+        <activity
+            android:name=".activity.ActivityDialog"
+            android:theme="@style/AppTheme.AppCompat.Dialog.Alert" />
     </application>
 
 </manifest>

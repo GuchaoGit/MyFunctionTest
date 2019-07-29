@@ -51,6 +51,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="标题：" />
+
+        <Button
+            android:id="@+id/btn_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="窗口化Activity" />
     </LinearLayout>
 
     <com.guc.mylibrary.widgets.LooperTextView
