@@ -8,10 +8,13 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.guc.mylibrary.R;
+import com.guc.mylibrary.dialogs.DialogCustom;
+import com.guc.mylibrary.dialogs.SingleSelectDialog;
 import com.guc.mylibrary.utils.IPUtil;
 import com.guc.mylibrary.widgets.FoldView;
 import com.guc.mylibrary.widgets.LooperTextView;
@@ -37,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout mLlContent;
     @BindView(R.id.ltv_notice)
     LooperTextView mLtvNotice;
+    @BindView(R.id.btn_show_list)
+    Button mBtnShowList;
 
     @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        mLtvNotice.setTipList(new ArrayList<String>(){
+        mLtvNotice.setTipList(new ArrayList<String>() {
             {
                 add("华为天际通全球上网，6月流量提前买...");
                 add("2019国外移民新政策...");
@@ -89,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.tv_expandable, R.id.tv_contacts, R.id.tv_selector, R.id.fd_view, R.id.btn_dialog})
+    @OnClick({R.id.tv_expandable, R.id.tv_contacts, R.id.tv_selector, R.id.fd_view, R.id.btn_dialog, R.id.btn_show_list,R.id.btn_show_custom_dialog})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_expandable:
@@ -103,6 +108,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_dialog:
                 ActivityDialog.jump(this, true);
+                break;
+            case R.id.btn_show_list:
+                SingleSelectDialog dialog1 = new SingleSelectDialog(this).showDropDownAs(mBtnShowList);
+                dialog1.show();
+                break;
+            case R.id.btn_show_custom_dialog:
+                DialogCustom dlg = new DialogCustom(this);
+                dlg.setTipMsg("确定要退出？");
+                dlg.show();
                 break;
         }
     }

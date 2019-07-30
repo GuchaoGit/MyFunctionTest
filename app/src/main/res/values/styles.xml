@@ -77,10 +77,17 @@
     <style name="ActionSheetDialogStyle" parent="MyDialog">
         <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
     </style>
+    <style name="ActionSheetDialogStyleReverse" parent="MyDialog">
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimationReverse</item>
+    </style>
     <!-- ActionSheet进出动画 -->
     <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/dialog_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+    <style name="ActionSheetDialogAnimationReverse" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_in2</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out2</item>
     </style>
     <!--DialogFragment样式-->
     <style name="AppTheme.AppCompat.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">

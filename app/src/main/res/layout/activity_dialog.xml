@@ -17,4 +17,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="显示提示dialog" />
+    <Button
+        android:id="@+id/btn_show_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示选择dialog" />
+
 </LinearLayout>

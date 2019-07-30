@@ -20,4 +20,5 @@
     <color name="colorOrange">#FDAF27</color>
     <color name="text_black">#333333</color>
     <color name="text_grey">#666666</color>
+    <color name="bg_gray">#eaeaea</color>
 </resources>
