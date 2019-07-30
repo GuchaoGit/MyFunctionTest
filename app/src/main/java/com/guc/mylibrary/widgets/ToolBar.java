@@ -3,6 +3,7 @@ package com.guc.mylibrary.widgets;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -43,6 +44,8 @@ public class ToolBar extends FrameLayout {
     RelativeLayout mRlFunctionLeft;
     @BindView(R.id.tv_right_function)
     TextView mTvRightFunction;
+    @BindView(R.id.rl_header_root)
+    RelativeLayout mRlHeaderRoot;
     private Context mCxt;
 
     private int mLeftFunType;
@@ -51,6 +54,7 @@ public class ToolBar extends FrameLayout {
     private int mRightIconId;
     private int mTitleTextColor;
     private int mTitleTextSize;
+    private boolean isTransBg;
     private CharSequence mTitle;
     private CharSequence mRightFuncitonString;
     private OnLeftClickedListener mOnLeftClickedListener;
@@ -94,6 +98,7 @@ public class ToolBar extends FrameLayout {
         mRightFunType = a.getInt(R.styleable.ToolBar_rightType, 0);
         mRightIconId = a.getResourceId(R.styleable.ToolBar_rightIcon, R.drawable.selector_btn_more);
         mRightFuncitonString = a.getText(R.styleable.ToolBar_rightString);
+        isTransBg = a.getBoolean(R.styleable.ToolBar_isTransBg, false);
         a.recycle();
     }
 
@@ -111,7 +116,7 @@ public class ToolBar extends FrameLayout {
         }
         mIvFunctionLeft.setBackgroundResource(mLeftIconId);
         mTitle = mTitle == null ? "暂无" : mTitle;
-        mRightFuncitonString = mRightFuncitonString == null ? "新增" : mTitle;
+        mRightFuncitonString = mRightFuncitonString == null ? "新增" : mRightFuncitonString;
         mTvTitle.setText(mTitle);
         mTvRightFunction.setText(mRightFuncitonString);
         mTvTitle.setTextColor(mTitleTextColor);
@@ -131,6 +136,7 @@ public class ToolBar extends FrameLayout {
                 mTvRightFunction.setVisibility(View.VISIBLE);
                 break;
         }
+        if (isTransBg) setBackgroundTrans();
     }
 
     @OnClick({R.id.rl_function_left, R.id.rl_function_right, R.id.tv_right_function})
@@ -169,6 +175,12 @@ public class ToolBar extends FrameLayout {
         }
     }
 
+    /**
+     * 设置为透明背景
+     */
+    public void setBackgroundTrans() {
+        mRlHeaderRoot.setBackground(new ColorDrawable(getResources().getColor(R.color.colorTrans)));
+    }
     @SuppressWarnings("SameParameterValue")
     private int sp2px(float spValue) {
         float fontScale = mCxt.getResources().getDisplayMetrics().scaledDensity;

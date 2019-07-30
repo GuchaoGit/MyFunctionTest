@@ -47,6 +47,7 @@
         </attr>
         <attr name="rightIcon" format="reference" />
         <attr name="rightString" format="reference|string" />
+        <attr name="isTransBg" format="boolean" />
     </declare-styleable>
     <declare-styleable name="WheelView">
         <attr name="pickerview_gravity" format="integer" />
