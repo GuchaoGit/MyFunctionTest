@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.guc.mylibrary.R;
@@ -27,6 +28,8 @@ public class DialogCustom extends Dialog {
     TextView mTvCancle;
     @BindView(R.id.tv_sure)
     TextView mTvSure;
+    @BindView(R.id.iv_icon)
+    ImageView mIcon;
     private OnclickListener mListner;
 
 
@@ -52,6 +55,22 @@ public class DialogCustom extends Dialog {
         return this;
     }
 
+    /**
+     * 设置是否有图标
+     *
+     * @param visiable true:有 false:没有
+     * @param resId    icon 资源id
+     * @return this
+     */
+    public DialogCustom setIconAndVisiable(boolean visiable, int resId) {
+        if (visiable) {
+            mIcon.setVisibility(View.VISIBLE);
+            mIcon.setBackgroundResource(resId);
+        } else {
+            mIcon.setVisibility(View.GONE);
+        }
+        return this;
+    }
     private void initView() {
         setContentView(R.layout.layout_dialog);
         ButterKnife.bind(this);
