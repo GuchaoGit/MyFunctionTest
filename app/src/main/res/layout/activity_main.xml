@@ -67,6 +67,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="显示自定义dialog" />
+
+        <Button
+            android:id="@+id/btn_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="去录像" />
     </LinearLayout>
 
     <com.guc.mylibrary.widgets.LooperTextView

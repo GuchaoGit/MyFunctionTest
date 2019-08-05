@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.tv_expandable, R.id.tv_contacts, R.id.tv_selector, R.id.fd_view, R.id.btn_dialog, R.id.btn_show_list,R.id.btn_show_custom_dialog})
+    @OnClick({R.id.tv_expandable, R.id.tv_contacts, R.id.tv_selector, R.id.fd_view, R.id.btn_dialog, R.id.btn_show_list, R.id.btn_show_custom_dialog, R.id.btn_video})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_expandable:
@@ -117,6 +117,9 @@ public class MainActivity extends AppCompatActivity {
                 DialogCustom dlg = new DialogCustom(this);
                 dlg.setTipMsg("确定要退出？");
                 dlg.show();
+                break;
+            case R.id.btn_video:
+                ActivityVideoRecord.jump(this);
                 break;
         }
     }

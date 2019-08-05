@@ -9,3 +9,5 @@
 * 8.自定义标题栏Toolbar
 * 9.窗口化Activity
 * 10.自定义DialogCustom,SingleSelectDialog
+* 11.BaseActivity封装权限申请
+* 12.调用系统相机拍摄

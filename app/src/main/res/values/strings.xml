@@ -21,4 +21,7 @@
     <string name="str_nul">暂无</string>
     <string name="str_add">新增</string>
 
+    <string name="str_portrait_identify">人像识别</string>
+    <string name="str_card_identify">身份证识别</string>
+
 </resources>
