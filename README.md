@@ -11,3 +11,4 @@
 * 10.自定义DialogCustom,SingleSelectDialog
 * 11.BaseActivity封装权限申请
 * 12.调用系统相机拍摄
+* 13.Spinner使用

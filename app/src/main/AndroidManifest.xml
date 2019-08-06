@@ -4,7 +4,6 @@
     <!-- 拨打电话权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- 网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -15,13 +14,14 @@
         android:required="true" />
 
     <application
+        android:name=".base.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".base.MyApplication"
         android:theme="@style/AppTheme">
+
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,14 +38,13 @@
         <activity
             android:name=".activity.ActivityPickerViewTest"
             android:label="@string/pickerview_submit" />
+        <activity android:name=".activity.ActivitySpinnerTest" />
         <activity
             android:name=".activity.ActivityDialog"
             android:theme="@style/AppTheme.AppCompat.Dialog.Alert" />
-
         <activity android:name=".activity.ActivityVideoRecord" />
         <activity android:name=".activity.ActivityCameraIdentify" />
-
-        <!--数据共享-->
+        <!-- 数据共享 -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.android7.fileprovider"

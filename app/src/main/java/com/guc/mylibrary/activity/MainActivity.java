@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.tv_expandable, R.id.tv_contacts, R.id.tv_selector, R.id.fd_view, R.id.btn_dialog, R.id.btn_show_list, R.id.btn_show_custom_dialog, R.id.btn_video})
+    @OnClick({R.id.tv_expandable, R.id.tv_contacts, R.id.tv_selector, R.id.fd_view, R.id.btn_dialog, R.id.btn_show_list, R.id.btn_show_custom_dialog, R.id.btn_video, R.id.btn_spinner})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_expandable:
@@ -120,6 +120,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_video:
                 ActivityVideoRecord.jump(this);
+                break;
+            case R.id.btn_spinner:
+                ActivitySpinnerTest.jump(this);
                 break;
         }
     }
