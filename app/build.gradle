@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
+    buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "com.guc.mylibrary"
         minSdkVersion 19
@@ -16,11 +17,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildToolsVersion '28.0.2'
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+
 }
 
 dependencies {
@@ -41,4 +47,6 @@ dependencies {
 //rxjava+rxandroid
     implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    //视频录制工具
+    implementation project(':SmallVideoLib')
 }
