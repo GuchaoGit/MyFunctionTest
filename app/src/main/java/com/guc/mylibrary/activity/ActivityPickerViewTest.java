@@ -116,8 +116,8 @@ public class ActivityPickerViewTest extends Activity {
                 break;
             case R.id.btn_sel_time:
                 mTimePicker = new TimePickerView.Builder(this, (Date date, View v) ->
-                        mTvSelTime.setContent(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(date))
-                ).setType(TimePickerView.Type.ALL).setContentSize(14).build();
+                        mTvSelTime.setContent(new SimpleDateFormat("yyyy-MM").format(date))
+                ).setType(TimePickerView.Type.YEAR_MONTH).setLabel("", "", "", "", "", "").setContentSize(14).build();
                 mTimePicker.show();
                 break;
             case R.id.btn_sel_option2:

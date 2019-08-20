@@ -23,6 +23,7 @@ import com.guc.mylibrary.R;
 import com.guc.mylibrary.base.BaseActivity;
 import com.guc.mylibrary.base.MyApplication;
 import com.guc.mylibrary.utils.DataCleanManager;
+import com.guc.mylibrary.utils.DownloadUtil;
 import com.guc.mylibrary.utils.ImageUtils;
 import com.guc.mylibrary.utils.Utils;
 import com.mabeijianxi.smallvideorecord2.MediaRecorderActivity;
@@ -56,6 +57,12 @@ public class ActivityVideoRecord extends BaseActivity {
     ImageView mIvPreview;
     @BindView(R.id.iv_preview2)
     ImageView mIvPreview2;
+    @BindView(R.id.btn_download)
+    Button mBtnDownload;
+    @BindView(R.id.tv_hint)
+    TextView mTvHint;
+    @BindView(R.id.iv_preview3)
+    ImageView mIvPreview3;
     private int VIDEO_CAPTURE = 222;
     private String filePath;
     private String videoPic;
@@ -111,7 +118,7 @@ public class ActivityVideoRecord extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.btn_record, R.id.btn_face_identify, R.id.btn_record2, R.id.iv_preview2})
+    @OnClick({R.id.btn_record, R.id.btn_face_identify, R.id.btn_record2, R.id.iv_preview2, R.id.btn_download})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_record:
@@ -150,8 +157,30 @@ public class ActivityVideoRecord extends BaseActivity {
                 if (TextUtils.isEmpty(videoPath)) return;
                 VideoPlayerActivity.jump(mContext, videoPath);
                 break;
+            case R.id.btn_download://下载一张图片
+                downloadPicture();
+                break;
         }
 
+    }
+
+    private void downloadPicture() {
+        DownloadUtil.get().download("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566280341726&di=58135f94d5cf92ea07e8ea9e349431af&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201603%2F13%2F20160313163702_XaJvx.jpeg", getExternalCacheDir() + "/", "20160313163702_XaJvx.jpeg", (response ->
+        {
+            switch (response.code) {
+                case -1:
+                    mTvHint.setText(getString(R.string.download_hint, "下载失败"));
+                    break;
+                case 0:
+                    mTvHint.setText(getString(R.string.download_hint, response.progress + "%"));
+                    break;
+                case 1:
+                    mTvHint.setText(getString(R.string.download_hint, "下载完成"));
+                    Glide.with(mContext).load(response.file).into(mIvPreview3);
+                    break;
+            }
+        }
+        ));
     }
 
     private void calculateFileSize(File file) {
