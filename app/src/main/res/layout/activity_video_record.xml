@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="@string/download_hint" />
 
-    <ImageView
+    <uk.co.senab.photoview.PhotoView
         android:id="@+id/iv_preview3"
         android:layout_width="100dp"
         android:layout_height="100dp" />

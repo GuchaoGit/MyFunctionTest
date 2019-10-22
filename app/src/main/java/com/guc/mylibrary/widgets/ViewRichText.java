@@ -50,7 +50,7 @@ public class ViewRichText extends AppCompatTextView {
             String str = mTitle + content;
             SpannableString spannableString = new SpannableString(str);
             spannableString.setSpan(new ForegroundColorSpan(mTitleTextColor), 0, mTitle.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            spannableString.setSpan(new ForegroundColorSpan(mContentTextColor), mTitle.length() + 1, str.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannableString.setSpan(new ForegroundColorSpan(mContentTextColor), mTitle.length(), str.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             setText(spannableString);
         }
 

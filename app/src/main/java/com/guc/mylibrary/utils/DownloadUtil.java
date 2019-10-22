@@ -30,7 +30,7 @@ public class DownloadUtil {
     private final OkHttpClient okHttpClient;
 
 
-    public DownloadUtil() {
+    private DownloadUtil() {
 
         okHttpClient = new OkHttpClient();
 
@@ -65,11 +65,8 @@ public class DownloadUtil {
         Observable.create((ObservableEmitter<DownloadResponse> emitter) -> {
                     //异步请求
                     okHttpClient.newCall(request).enqueue(new Callback() {
-
                         @Override
-
                         public void onFailure(Call call, IOException e) {
-
                             // 下载失败监听回调
                             rsp.code = -1;
                             rsp.exception = e;
@@ -81,8 +78,6 @@ public class DownloadUtil {
                         @Override
 
                         public void onResponse(Call call, Response response) throws IOException {
-
-
                             InputStream is = null;
 
                             byte[] buf = new byte[2048];
